@@ -14,4 +14,12 @@ return $messages = [
     'denied' => 'geweigerd',
     'Access Granted' => 'Toegang toegekend',
     'Product Table' => 'Producttabel',
+    'Add new product!' => 'Nieuw product toevoegen!',
+    'Show all products!' => 'Toon alle producten!',
+    'Place new Order!' => 'Nieuwe bestelling plaatsen!',
+    'Show all Order!' => 'Toon alle Bestelling!',
+    'Setting' => 'Instelling',
+    'Add Component!' => 'Component toevoegen!',
+    'Add New Role' => 'Nieuwe rol toevoegen',
+    'Access Control' => 'Toegangscontrole'
 ];

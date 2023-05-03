@@ -14,7 +14,6 @@ class Locale extends Injectable
      */
     public function getTranslator(): NativeArray
     {
-        // Ask browser what is the best language
         $language = $_SESSION['language'];
         $messages = [];
         if (isset($_SESSION['language'])) {
@@ -31,12 +30,7 @@ class Locale extends Injectable
 
         if ($di->get('cache')->has('words') && $di->get('cache')->get('language') == $language) {
             $array = json_decode(json_encode(array($di->get('cache')->get('words'))[0]), true);
-            return $factory->newInstance(
-                'array',
-                    [
-                    'content' => $array,
-                    ]
-                );
+            return $factory->newInstance('array', ['content' => $array]);
         } else {
             $di->get('cache')->set('words', $messages);
             $di->get('cache')->set('language', $language);

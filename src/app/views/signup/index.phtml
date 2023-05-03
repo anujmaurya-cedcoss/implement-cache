@@ -7,10 +7,10 @@ if (isset($_POST["language"])) {
 }
 ?>
 <form method="POST" action='#'>
-    <?php echo $this->locale->_("Choose Language");?>
-    
+    <?php echo $this->locale->_("Choose Language"); ?>
+
     <select name="language" onchange="this.form.submit()">
-        <?php if(isset($_SESSION['language'])) {
+        <?php if (isset($_SESSION['language'])) {
             echo "<option value=\"$_SESSION[language]\">$_SESSION[language]</option>";
         } else {
             echo "<option value=\"\" disabled selected>--select--</option>";
@@ -22,23 +22,31 @@ if (isset($_POST["language"])) {
 </form>
 <?php echo $this->tag->form(["signup/signup", 'class' => 'form']); ?>
 <p>
-    <label for="name"><?php echo $this->locale->_("Name")?></label>
+    <label for="name">
+        <?php echo $this->locale->_("Name") ?>
+    </label>
     <?php echo $this->tag->textField("name"); ?>
 </p>
 <p>
-    <label for="email"><?php echo $this->locale->_("email")?></label>
+    <label for="email">
+        <?php echo $this->locale->_("email") ?>
+    </label>
     <?php echo $this->tag->textField("email"); ?>
 </p>
 <p>
-    <label for="password"><?php echo $this->locale->_("Password")?></label>
+    <label for="password">
+        <?php echo $this->locale->_("Password") ?>
+    </label>
     <?php echo $this->tag->textField("password"); ?>
 </p>
 <p>
     <!-- product dropdown -->
-    <label for="role"><?php echo $this->locale->_("Choose the role")?></label>
+    <label for="role">
+        <?php echo $this->locale->_("Choose the role") ?>
+    </label>
     <select name="role" id="role">
         <option value="user">
-        <?php echo $this->locale->_("User")?>
+            <?php echo $this->locale->_("User") ?>
         </option>
         <option value="admin">
             <?php echo $this->locale->_('admin'); ?>
